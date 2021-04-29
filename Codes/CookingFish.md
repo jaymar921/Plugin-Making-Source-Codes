@@ -11,10 +11,10 @@
 	    
 			  cook_source.setType(getCooked(cook_source.getType()));  //Sets the type of the source item
 	      
-			  String dispay = ChatColor.GRAY+ "Cooked "  + cook_source.getItemMeta().getDisplayName();  //you can do anything you want here
+			  String display = ChatColor.GRAY+ "Cooked "  + cook_source.getItemMeta().getDisplayName();  //you can do anything you want here
 			  ItemMeta meta = cook_source.getItemMeta(); //meta = cook_source item meta, if it has an existing lore or data in it, it will be copied as well
 	
-			  meta.setDisplayName(dispay);;  //we set the display name of the cooked item
+			  meta.setDisplayName(display);;  //we set the display name of the cooked item
 			  cook_source.setItemMeta(meta); //set the item meta to the source item
 	
 			  event.setResult(cook_source); //set the result as the source item
