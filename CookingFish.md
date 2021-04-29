@@ -30,5 +30,5 @@
 	    if(type.equals(Material.SALMON)) //if material is equals to SALMON
 		    material_type = Material.COOKED_SALMON; // it returns the cooked result of SALMON which is COOKED_SALMON
             
-	    return material_type;
+	    return material_type; 
     }
