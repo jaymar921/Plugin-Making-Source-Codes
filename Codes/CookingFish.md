@@ -1,5 +1,5 @@
 ### Cooking A fish event
-**After cooking the fish, it should return the same lore as the source**
+**After cooking the fish, it should return the same lore and display name as the source,**
 **you can also copy the display name if you want :>**
 >Source code
 
