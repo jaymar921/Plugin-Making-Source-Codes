@@ -23,6 +23,7 @@ public class Schematic
     private int height;
     private int length;
     
+    //constructors
     public Schematic(Material[] blocks, BlockData[] data, int width, int height, int length) {
     	this.data = data;
     	this.blocks = blocks;
@@ -35,6 +36,7 @@ public class Schematic
     	this(new Material[width*length*height], new BlockData[(width*height*length)], width, height, length);
     }
     
+    //getters
     public Material[] getBlocks() {
     	return blocks;
     }
@@ -51,6 +53,7 @@ public class Schematic
     	return length;
     }
     
+    //save the schematic from given location into the memory
     public void saveSchematic(Location loc) {
     	blocks = new Material[width*height*length];
     	int traverse = 0;
@@ -66,6 +69,7 @@ public class Schematic
     	System.out.println(traverse);
     }
     
+    //paste the schematic stored from memory to the world at given location
     public void pasteSchematic(Location loc) {
     	
     	int traverse = 0;
@@ -79,6 +83,8 @@ public class Schematic
     	}
     }
     
+    //paste the schematic stored from memory to the world at given location
+    //it denies air when pasting, it can be used to overlap a terrain
     public void pasteSchematic_neglectAIR(Location loc) {
     	
     	int traverse = 0;
@@ -96,6 +102,7 @@ public class Schematic
     	}
     }
     
+    //save the schematic from the memory to the plugins folder
     public void saveToFile(String filename) {
     	String extension = "custom_schematic";
     	
@@ -131,6 +138,7 @@ public class Schematic
 
     }
     
+    //load the schematic file from the plugin's folder to the memory
     public void loadFromFile(String filename) {
     	String extension = "custom_schematic";
     	try {
@@ -178,6 +186,9 @@ public class Schematic
     	
     }
     
+    //load the schematic file as string,
+    //saving a schematic will have this format
+    //width-height-length@MATERIAL_STRING@BLOCKDATA_STRING
     public void loadAsString(String DATA) {
     	try {
     		StringBuffer content = new StringBuffer();
